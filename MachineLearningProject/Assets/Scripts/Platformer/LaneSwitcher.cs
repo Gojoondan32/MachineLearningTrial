@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LaneSwitcher : MonoBehaviour
 {
-    [SerializeField] private Transform[] lanes;
+    [SerializeField] private Vector3[] lanes;
     [SerializeField] private int laneIndex;
     
     private void Awake() {
@@ -18,6 +18,6 @@ public class LaneSwitcher : MonoBehaviour
         else if(Input.GetKeyDown(KeyCode.A)) laneIndex--;
         laneIndex = Mathf.Clamp(laneIndex, 0, 2);
 
-        transform.position = lanes[laneIndex].position;
+        transform.position = lanes[laneIndex];
     }
 }
