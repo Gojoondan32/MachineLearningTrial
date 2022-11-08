@@ -13,7 +13,8 @@ public class MoveToGoalAgent : Agent
     [SerializeField] private MeshRenderer groundMeshRend;
     public override void OnEpisodeBegin()
     {
-        transform.localPosition = Vector3.zero;
+        transform.localPosition = new Vector3(Random.Range(-4f, 1f), 0, Random.Range(-3f, 3f));
+        targetPosition.localPosition = new Vector3(Random.Range(-3.5f, 3.5f), 0, Random.Range(-3.5f, 3.5f));
     }
     public override void CollectObservations(VectorSensor sensor)
     {
