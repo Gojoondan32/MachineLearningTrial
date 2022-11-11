@@ -20,4 +20,13 @@ public class LaneSwitcher : MonoBehaviour
 
         transform.position = lanes[laneIndex];
     }
+
+    private void OnTriggerEnter(Collider other){
+        if(other.GetComponent<Obstacle>().GetObstacleType == ObstacleType.wall){
+            Debug.Log("Punishment");
+        }
+        else if(other.GetComponent<Obstacle>().GetObstacleType == ObstacleType.passable){
+            Debug.Log("Reward");
+        }
+    }
 }
