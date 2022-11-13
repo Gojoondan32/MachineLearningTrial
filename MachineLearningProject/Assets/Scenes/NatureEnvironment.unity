@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AnimalPen (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 240469835819945178, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5978642546469036312, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -190,6 +194,10 @@ PrefabInstance:
     - target: {fileID: 240469835819945178, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
       propertyPath: m_Name
       value: AnimalPen (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 240469835819945178, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5978642546469036312, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
       propertyPath: m_RootOrder
@@ -248,6 +256,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AnimalPen (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 240469835819945178, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5978642546469036312, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
       propertyPath: m_RootOrder
       value: 24
@@ -304,6 +316,10 @@ PrefabInstance:
     - target: {fileID: 240469835819945178, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
       propertyPath: m_Name
       value: AnimalPen (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 240469835819945178, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5978642546469036312, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
       propertyPath: m_RootOrder
@@ -362,6 +378,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AnimalPen (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 240469835819945178, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5978642546469036312, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -418,6 +438,10 @@ PrefabInstance:
     - target: {fileID: 240469835819945178, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
       propertyPath: m_Name
       value: AnimalPen (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 240469835819945178, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5978642546469036312, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
       propertyPath: m_RootOrder
@@ -476,6 +500,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AnimalPen (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 240469835819945178, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5978642546469036312, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
       propertyPath: m_RootOrder
       value: 23
@@ -532,6 +560,10 @@ PrefabInstance:
     - target: {fileID: 240469835819945178, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
       propertyPath: m_Name
       value: AnimalPen (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 240469835819945178, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5978642546469036312, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
       propertyPath: m_RootOrder
@@ -686,6 +718,10 @@ PrefabInstance:
     - target: {fileID: 240469835819945178, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
       propertyPath: m_Name
       value: AnimalPen (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 240469835819945178, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5978642546469036312, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
       propertyPath: m_RootOrder
@@ -977,6 +1013,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AnimalPen (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 240469835819945178, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5978642546469036312, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -1033,6 +1073,10 @@ PrefabInstance:
     - target: {fileID: 240469835819945178, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
       propertyPath: m_Name
       value: AnimalPen (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 240469835819945178, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5978642546469036312, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
       propertyPath: m_RootOrder
@@ -1091,6 +1135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AnimalPen (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 240469835819945178, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5978642546469036312, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -1148,6 +1196,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AnimalPen (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 240469835819945178, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5978642546469036312, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -1204,6 +1256,10 @@ PrefabInstance:
     - target: {fileID: 240469835819945178, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
       propertyPath: m_Name
       value: AnimalPen (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 240469835819945178, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5978642546469036312, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
       propertyPath: m_RootOrder
@@ -1356,6 +1412,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AnimalPen (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 240469835819945178, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5978642546469036312, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -1412,6 +1472,10 @@ PrefabInstance:
     - target: {fileID: 240469835819945178, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
       propertyPath: m_Name
       value: AnimalPen (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 240469835819945178, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5978642546469036312, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
       propertyPath: m_RootOrder
@@ -1470,6 +1534,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AnimalPen (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 240469835819945178, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5978642546469036312, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
       propertyPath: m_RootOrder
       value: 21
@@ -1527,6 +1595,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AnimalPen (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 240469835819945178, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5978642546469036312, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -1583,6 +1655,10 @@ PrefabInstance:
     - target: {fileID: 240469835819945178, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
       propertyPath: m_Name
       value: AnimalPen (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 240469835819945178, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5978642546469036312, guid: ecde0b4859f34f04a8968a6ce40ba37b, type: 3}
       propertyPath: m_RootOrder

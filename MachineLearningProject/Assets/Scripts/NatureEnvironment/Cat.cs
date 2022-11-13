@@ -9,11 +9,13 @@ public class Cat : Agent
 {
     //Needs to know the location of the mouse
     [SerializeField] private Transform mouse;
+    [SerializeField] private Transform cheese;
     [SerializeField] private EnvironmentManager environmentManager;
 
     public override void OnEpisodeBegin()
     {
         transform.localPosition = new Vector3(Random.Range(-4.4f, 4.4f), 0.3f, Random.Range(-4.4f, 4.4f));
+        cheese.localPosition = new Vector3(Random.Range(-4.4f, 4.4f), 0.2f, Random.Range(-4.4f, 4.4f));
         //transform.localPosition = Vector3.zero;
     }
 
@@ -22,6 +24,7 @@ public class Cat : Agent
     {
         sensor.AddObservation(transform.localPosition);
         sensor.AddObservation(mouse.localPosition);
+        sensor.AddObservation(cheese.localPosition);
     }
     
     
@@ -60,10 +63,14 @@ public class Cat : Agent
     private void OnCollisionEnter(Collision other) {
         
         if(other.gameObject.CompareTag("Mouse")){
-            environmentManager.DistributeRewards(RewardType.catFindMouse);
+            //environmentManager.DistributeRewards(RewardType.catFindMouse);
+            SetReward(1f);
+            EndEpisode();
         }
         else if(other.gameObject.CompareTag("Wall")){
-            environmentManager.DistributeRewards(RewardType.catInWall);
+            //environmentManager.DistributeRewards(RewardType.catInWall);
+            SetReward(-1f);
+            EndEpisode();
         }
         
     }

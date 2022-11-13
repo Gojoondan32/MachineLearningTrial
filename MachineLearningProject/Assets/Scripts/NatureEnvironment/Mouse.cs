@@ -9,16 +9,19 @@ public class Mouse : Agent
 {
     //Needs to know the location of the cat
     [SerializeField] private Transform cat;
+    [SerializeField] private Transform cheese; 
     [SerializeField] private EnvironmentManager environmentManager;
 
     public override void OnEpisodeBegin()
     {
-        transform.localPosition = new Vector3(Random.Range(-4.4f, 4.4f), 0.15f, Random.Range(-4.4f, 4.4f));
+        transform.localPosition = new Vector3(Random.Range(-4.4f, 4.4f), 0.3f, Random.Range(-4.4f, 4.4f));
+        cheese.localPosition = new Vector3(Random.Range(-4.4f, 4.4f), 0.2f, Random.Range(-4.4f, 4.4f));
     }
 
     public override void CollectObservations(VectorSensor sensor){
         sensor.AddObservation(transform.localPosition);
         sensor.AddObservation(cat.localPosition);
+        sensor.AddObservation(cheese.localPosition);
     }
 
     public override void OnActionReceived(ActionBuffers actions)
@@ -42,7 +45,18 @@ public class Mouse : Agent
 
         if (other.gameObject.CompareTag("Wall"))
         {
-            environmentManager.DistributeRewards(RewardType.mouseInWall);
+            //environmentManager.DistributeRewards(RewardType.mouseInWall);
+            SetReward(-1f);
+            EndEpisode();
+        }
+        else if(other.gameObject.CompareTag("Cheese")){
+            //environmentManager.DistributeRewards(RewardType.mouseFoundCheese);
+            SetReward(1f);
+            EndEpisode();
+        }
+        else if(other.gameObject.CompareTag("Cat")){
+            SetReward(-1f);
+            EndEpisode();
         }
         
 

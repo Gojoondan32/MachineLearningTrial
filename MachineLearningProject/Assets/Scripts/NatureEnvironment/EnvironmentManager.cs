@@ -6,7 +6,7 @@ public enum RewardType {
     mouseInWall, 
     catInWall, 
     catFindMouse, 
-    mouseSurvive
+    mouseFoundCheese
 }
 
 public class EnvironmentManager : MonoBehaviour
@@ -36,7 +36,7 @@ public class EnvironmentManager : MonoBehaviour
                 mouse.SetReward(-1f);
                 EndCurrentEpisode(true);
                 break;
-            case RewardType.mouseSurvive: //Fix this reward system
+            case RewardType.mouseFoundCheese: //Fix this reward system
                 mouse.SetReward(1f);
                 cat.SetReward(-1f);
                 EndCurrentEpisode(false);
@@ -45,7 +45,16 @@ public class EnvironmentManager : MonoBehaviour
         
     }
 
-    private void SetFloorMaterial(bool catWin) => floorMesh.material = catWin ? this.catWin : mouseWin;
+    private float CalculateMouseReward(bool maxPenalty = false){
+        if(maxPenalty) return 45; //Calculated from the maximum distance the mouse and cat can be from each other
+
+        Vector3 catPos = cat.gameObject.transform.position;
+        Vector3 mousePos = mouse.gameObject.transform.position;
+
+        return (catPos - mousePos).magnitude;
+    }
+
+    public void SetFloorMaterial(bool catWin) => floorMesh.material = catWin ? this.catWin : mouseWin;
 
     private void EndCurrentEpisode(bool catWin){
         Debug.Log("Episode Ended");
