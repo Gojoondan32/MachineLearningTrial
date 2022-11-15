@@ -9,10 +9,21 @@ public class Goalie : Agent
 {
     [SerializeField] private Transform ball;
 
+    public override void OnEpisodeBegin()
+    {
+       
+        transform.localPosition = new Vector3(0, 0.45f, 1.25f);
+        
+        //ball.localPosition = new Vector3(0, 0.1f, -1.7f);
+
+        
+        
+    }
+
     public override void CollectObservations(VectorSensor sensor)
     {
         sensor.AddObservation(transform.localPosition);
-        sensor.AddObservation(ball.localPosition);
+        sensor.AddObservation(ball.transform.localPosition);
     }
 
     public override void OnActionReceived(ActionBuffers actions)
@@ -21,7 +32,7 @@ public class Goalie : Agent
         float z = actions.ContinuousActions[1];
 
         float speed = 6f;
-        transform.position += new Vector3(x, 0, z) * speed * Time.deltaTime;
+        transform.localPosition += new Vector3(x, 0, z) * speed * Time.deltaTime;
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)
@@ -32,10 +43,12 @@ public class Goalie : Agent
     private void OnTriggerEnter(Collider other) {
         //This is actually the ball but this just saves having to make another tag
         if(other.gameObject.CompareTag("Goal")){
-
+            SetReward(1f);
+            EndEpisode();
         }
         else if(other.gameObject.CompareTag("Wall")){
-            
+            SetReward(-1f);
+            EndEpisode();
         }
     }
 }
