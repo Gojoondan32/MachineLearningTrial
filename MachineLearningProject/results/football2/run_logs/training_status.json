@@ -1,0 +1,38 @@
+{
+    "Goalie": {
+        "checkpoints": [
+            {
+                "steps": 499999,
+                "file_path": "results\\football2\\Goalie\\Goalie-499999.onnx",
+                "reward": -1.0606060606060606,
+                "creation_time": 1668785148.3060718,
+                "auxillary_file_paths": [
+                    "results\\football2\\Goalie\\Goalie-499999.pt"
+                ]
+            },
+            {
+                "steps": 500003,
+                "file_path": "results\\football2\\Goalie\\Goalie-500003.onnx",
+                "reward": -1.0,
+                "creation_time": 1668785148.3489575,
+                "auxillary_file_paths": [
+                    "results\\football2\\Goalie\\Goalie-500003.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 500003,
+            "file_path": "results\\football2\\Goalie.onnx",
+            "reward": -1.0,
+            "creation_time": 1668785148.3489575,
+            "auxillary_file_paths": [
+                "results\\football2\\Goalie\\Goalie-500003.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.29.0",
+        "torch_version": "1.13.0+cpu"
+    }
+}

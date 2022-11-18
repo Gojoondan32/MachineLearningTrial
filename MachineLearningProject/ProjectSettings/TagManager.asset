@@ -9,6 +9,7 @@ TagManager:
   - Mouse
   - Cheese
   - Cat
+  - Ball
   layers:
   - Default
   - TransparentFX
