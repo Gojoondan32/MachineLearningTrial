@@ -8,15 +8,13 @@ using Unity.MLAgents.Actuators;
 public class Lion : Agent, IAnimal
 {
     private AnimalStats _animalStats;
+    private float statValue;
 
     //Call when this agent is created 
     public void InheritGenes(AnimalStats animalStats){
         _animalStats = animalStats;
-    }
-    public override void Initialize()
-    {
-        //This is called as soon as the agent is created
-        base.Initialize();
+        
+        transform.localScale = _animalStats.GetCurrentSize();
     }
 
     public override void CollectObservations(VectorSensor sensor)
@@ -26,8 +24,20 @@ public class Lion : Agent, IAnimal
 
     public override void OnActionReceived(ActionBuffers actions)
     {
-        base.OnActionReceived(actions);
+        float x = actions.ContinuousActions[0];
+        float z = actions.ContinuousActions[1];
+        statValue = actions.ContinuousActions[2];
+
+        transform.position += new Vector3(x, 0, z) * _animalStats.GetSpeed() * Time.deltaTime;
     }
 
+    private void IncreaseStat(){
+        
+    }
+    
+    public void BirthOffspring(){
+        //The animal stats will need some changing to them
+        EnvironmentAdministrator.Instance.BirthAnimal(_animalStats, transform.position, Quaternion.identity);
+    }
     
 }

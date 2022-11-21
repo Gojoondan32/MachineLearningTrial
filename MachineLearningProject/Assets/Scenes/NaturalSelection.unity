@@ -413,7 +413,7 @@ MonoBehaviour:
   - {fileID: 1423582214}
   - {fileID: 2081908997}
   _foodPrefab: {fileID: 9099809325363825135, guid: b3230224261b7704b8e5e43fda04a615, type: 3}
-  _animal: {fileID: 0}
+  _animal: {fileID: 7142322451965174336, guid: d49a857ae75ef81408d62fcf03248c4f, type: 3}
 --- !u!1 &2081908996
 GameObject:
   m_ObjectHideFlags: 0
@@ -596,6 +596,10 @@ PrefabInstance:
     - target: {fileID: 7229233996136013171, guid: d49a857ae75ef81408d62fcf03248c4f, type: 3}
       propertyPath: m_Name
       value: Lion
+      objectReference: {fileID: 0}
+    - target: {fileID: 7229233996136013171, guid: d49a857ae75ef81408d62fcf03248c4f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7346653361595848475, guid: d49a857ae75ef81408d62fcf03248c4f, type: 3}
       propertyPath: m_BehaviorName
