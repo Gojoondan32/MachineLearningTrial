@@ -7,30 +7,32 @@ using Unity.MLAgents.Actuators;
 
 public class Goalie : Agent
 {
-    [SerializeField] private Transform ball;
-    [SerializeField] private Transform goal; 
-    [SerializeField] private GoalPoints goalPoints;
-    [SerializeField] private Transform[] walls;
+    [SerializeField] private Ball _ball;
+    [SerializeField] private Transform _goal; 
+    [SerializeField] private GoalPoints _goalPoints;
+    [SerializeField] private Transform[] _walls;
 
     public override void OnEpisodeBegin()
     {
         transform.localPosition = new Vector3(0, 0.45f, 1.25f);
-        ball.localPosition = new Vector3(0, 0.1f, -1.7f);
-
-        ball.GetComponent<Ball>().FireTheBall();
+        _ball.transform.localPosition = new Vector3(0, 0.1f, -1.7f);
+        _ball.FireTheBall();
+        //ball.GetComponent<Ball>().FireTheBall();
     }
 
     public override void CollectObservations(VectorSensor sensor)
     {
         sensor.AddObservation(transform.localPosition);
-        sensor.AddObservation(ball.transform.localPosition);
-        foreach(Transform points in goalPoints.goalPoints){
+        sensor.AddObservation(_ball.transform.localPosition);
+        sensor.AddObservation(_ball.BallDirection);
+        sensor.AddObservation(_goal.localPosition);
+        foreach(Transform points in _goalPoints.goalPoints){
             sensor.AddObservation(points.localPosition.x);
             sensor.AddObservation(points.localPosition.y);
             sensor.AddObservation(points.localPosition.z);
         }
 
-        foreach(Transform wallPoints in walls){
+        foreach(Transform wallPoints in _walls){
             sensor.AddObservation(wallPoints.localPosition.x);
             sensor.AddObservation(wallPoints.localPosition.y);
             sensor.AddObservation(wallPoints.localPosition.z);
@@ -55,7 +57,7 @@ public class Goalie : Agent
     private void OnTriggerEnter(Collider other) {
         if(other.gameObject.CompareTag("Ball")){
             UIManager.Instance.UpdateGoalAndSaves(TypeOfValue.save);
-            SetReward(1f);
+            SetReward(5f);
             EndEpisode();
         }
         else if(other.gameObject.CompareTag("Wall")){

@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5362909115951586382}
+  - component: {fileID: 2132748317917156063}
   m_Layer: 0
   m_Name: FootballArena
   m_TagString: Untagged
@@ -36,6 +37,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2132748317917156063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2395423677436213969}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4330ffb6461e9841a42d059322d981e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball: {fileID: 2918968862197109523}
 --- !u!1 &2918968860129695546
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,15 +957,15 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 1000
-  ball: {fileID: 2918968862197109521}
-  goal: {fileID: 0}
-  goalPoints:
+  _ball: {fileID: 2918968862197109523}
+  _goal: {fileID: 2918968862210149630}
+  _goalPoints:
     goalPoints:
     - {fileID: 2918968860171048059}
     - {fileID: 2918968861880614220}
     - {fileID: 2918968861618268327}
     - {fileID: 2918968860321192220}
-  walls:
+  _walls:
   - {fileID: 2918968860322033190}
   - {fileID: 2918968861024355974}
   - {fileID: 2918968861522672832}
@@ -969,7 +983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 30
+    VectorObservationSize: 36
     NumStackedVectorObservations: 5
     m_ActionSpec:
       m_NumContinuousActions: 2
@@ -978,9 +992,9 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 904a5bd5d5070754fb4d1db1500ba4af, type: 3}
+  m_Model: {fileID: 0}
   m_InferenceDevice: 0
-  m_BehaviorType: 2
+  m_BehaviorType: 0
   m_BehaviorName: Goalie
   TeamId: 0
   m_UseChildSensors: 1
@@ -1305,16 +1319,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0566bf6b2c7f0248b1c7f755a7266dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goalPoints:
+  _goalPoints:
     goalPoints:
     - {fileID: 2918968860171048059}
     - {fileID: 2918968861880614220}
     - {fileID: 2918968861618268327}
     - {fileID: 2918968860321192220}
-  goalie: {fileID: 2918968862018627778}
-  force: 200
-  currentTime: 0
-  testObj: {fileID: 0}
+  _goalie: {fileID: 2918968862018627778}
+  _force: 200
 --- !u!54 &2918968862197109520
 Rigidbody:
   m_ObjectHideFlags: 0

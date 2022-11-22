@@ -11,14 +11,15 @@ public class TestMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        //rb = GetComponent<Rigidbody>();
     }
 
     private void Update() {
-        x = Input.GetAxisRaw("Horizontal");
-        z = Input.GetAxisRaw("Vertical");
+        //x = Input.GetAxisRaw("Horizontal");
+        //z = Input.GetAxisRaw("Vertical");
         
-        transform.position += new Vector3(x, 0, z) * speed * Time.deltaTime;
+        //transform.position += new Vector3(x, 0, z) * speed * Time.deltaTime;
+        
     }
 
     private void FixedUpdate() {

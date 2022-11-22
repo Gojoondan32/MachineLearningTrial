@@ -1,0 +1,29 @@
+{
+    "Goalie": {
+        "checkpoints": [
+            {
+                "steps": 139507,
+                "file_path": "results\\football4\\Goalie\\Goalie-139507.onnx",
+                "reward": 1.2745098039215685,
+                "creation_time": 1669138647.6439023,
+                "auxillary_file_paths": [
+                    "results\\football4\\Goalie\\Goalie-139507.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 139507,
+            "file_path": "results\\football4\\Goalie.onnx",
+            "reward": 1.2745098039215685,
+            "creation_time": 1669138647.6439023,
+            "auxillary_file_paths": [
+                "results\\football4\\Goalie\\Goalie-139507.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.29.0",
+        "torch_version": "1.13.0+cpu"
+    }
+}

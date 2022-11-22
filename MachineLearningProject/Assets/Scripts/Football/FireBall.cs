@@ -10,6 +10,12 @@ public class FireBall : MonoBehaviour
     {
         //StartCoroutine(WaitTime());
     }
+
+    private void Update() {
+        if(Input.GetMouseButtonDown(0)){
+            ball.FireTheBall();
+        }
+    }
     private IEnumerator WaitTime(){
         yield return new WaitForSeconds(2f);
         ball.FireTheBall();

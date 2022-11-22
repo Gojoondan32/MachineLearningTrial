@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    [SerializeField] private GoalPoints goalPoints;
-    [SerializeField] private Goalie goalie;
-    private Rigidbody rb;
-    [SerializeField] private float force;
-    [SerializeField] private float currentTime;
-    [SerializeField] private Transform testObj;
-    private Vector3 startPos;
+    [SerializeField] private GoalPoints _goalPoints;
+    [SerializeField] private Goalie _goalie;
+    private Rigidbody _rb;
+    [SerializeField] private float _force;
+    private Vector3 _startPos;
+    private Vector3 _ballDirection;
+    public Vector3 BallDirection{get{return _ballDirection;}}
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        startPos = transform.position;
+        _rb = GetComponent<Rigidbody>();
+        _startPos = transform.position;
 
         
     }
@@ -23,24 +23,25 @@ public class Ball : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if(other.gameObject.CompareTag("Goal")){
             Debug.Log("Triggering");
-            rb.velocity = Vector3.zero;
-            transform.position = startPos;
+            _rb.velocity = Vector3.zero;
+            transform.position = _startPos;
 
             UIManager.Instance.UpdateGoalAndSaves(TypeOfValue.goal);
-            goalie.SetReward(-5f);
-            goalie.EndEpisode();
+            _goalie.SetReward(-5f);
+            _goalie.EndEpisode();
             
         }
     }
 
     public void FireTheBall(){
-        rb.AddForce((CalculatePositionToGoalPoint() - transform.position) * force);
+        _ballDirection = CalculatePositionToGoalPoint() - transform.position;
+        _rb.AddForce(BallDirection * _force);
     }
     private Vector3 CalculatePositionToGoalPoint(){
-        float x = Random.Range(goalPoints.goalPoints[0].position.x, goalPoints.goalPoints[1].position.x);
+        float x = Random.Range(_goalPoints.goalPoints[0].position.x, _goalPoints.goalPoints[1].position.x);
         float y = Random.Range(0f, 1);
 
-        Vector3 goalPoint = new Vector3(x, y, goalPoints.goalPoints[0].position.z);
+        Vector3 goalPoint = new Vector3(x, y, _goalPoints.goalPoints[0].position.z);
         //Debug.Log(goalPoint);
         //return goalPoint - rb.transform.position;
         return goalPoint;
